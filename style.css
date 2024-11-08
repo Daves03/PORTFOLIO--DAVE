@@ -29,8 +29,6 @@ a,
 nav,
 .nav-links {
   display: flex;
-  top: 0%;
-  position: sticky;
 }
 
 
@@ -60,15 +58,11 @@ a:hover {
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
 }
+.my-logo{
+  cursor: pointer;
+  height: 3rem; 
+  width: 7rem; 
 
-.name {
-  font-family:monospace;
-  font-size: 2rem;
-  color: #678e1d;
-}
-
-.name:hover {
-  cursor: default;
 }
 
 /* HAMBURGER MENU */
@@ -95,7 +89,7 @@ a:hover {
 .drop-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: #999;
   transition: all 0.3s ease-in-out; /* Fixed transition duration */
 }
 
@@ -143,13 +137,13 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: auto; /* Adjusted to allow dynamic height */
-  margin: 0 10rem;
+  margin: 0 5%; /* Updated to maintain margin on smaller screens */
   box-sizing: border-box;
 }
 
 .section-container {
   display: flex;
+  
 }
 
 /* PROFILE SECTION */
@@ -195,6 +189,7 @@ section {
   text-align: center;
   font-family: 'JosefinSans ';
   font-style: normal;
+  margin-bottom: 5vh;
   color: rgb(173, 173, 173);
 }
 
@@ -265,34 +260,41 @@ section {
   background: none;
 }
 
+.btn-color-1:hover{
+  background-color: transparent;
+  color: #678e1d;
+}
+.btn-color-2:hover{
+  background-color: #678e1d;
+  color: white;
+}
+
 /* ABOUT SECTION */
 
 #about {
-  height: 70vh;
   background-color: #252525; 
-  padding: 2rem;
-  width: 100%;
+  padding: 5rem;
   margin: 0; 
-  box-sizing: border-box;
-  justify-content: center;
+  position:relative;
 }
 
-  .about-containers {
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .about-details-container {
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .about-containers,
-  .about-details-container {
-    display: flex;
-  }
-  
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+
   .details-container {
     padding: 1.5rem;
     flex: 1;
@@ -300,16 +302,119 @@ section {
     color: #999;
     box-shadow: 0px 2px 20px 0px rgba(110, 130, 208, 0.11);
     text-align: center;
-    height: 125%;
-    width: 10%;
-  }
-  
+    
+  } 
+  .details-container2 {
+    padding: 1.5rem;
+    flex: 1;
+    background: #1d1d1d;
+    color: #999;
+    border-radius: 2rem;
+    box-shadow: 0px 2px 20px 0px rgba(110, 130, 208, 0.11);
+    text-align: center;
+    
+  } 
   .section-container {
     gap: 4rem;
-    height: 80%;
-    display: flex;
-    justify-content: center;
+    display: block; 
+    flex: 1;
   }
+
+  .details p{
+    color: #999;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;   
+  }
+
+  
+
+/* Overall Container */
+.progress-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  justify-items: center;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Outer Circle */
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#678e1d 0% 35%, #333 35% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#678e1d 0% 20%, #333 20% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#678e1d 0% 30%, #333 30% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#678e1d 0% 10%, #333 10% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner Circle */
+.inner-circle {
+  width: 75px;
+  height: 75px;
+  background-color: #252525;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centered Percentage Text */
+.progress-percentage {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(173, 173, 173);
+}
+
+/* Label Below the Circle */
+.progress-label {
+  margin-top: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #678e1d;
+  font-weight: bold;
+}
 
 
 /* EXPERIENCE SECTION */
@@ -354,23 +459,30 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
-  height: 70vh;
   background-color: #1d1d1d; 
-  padding: 2rem;
-  width: 100%;
+  padding: 5rem;
   margin: 0; 
   justify-content: center;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  background: #999
+}
+.details-container1 {
+  padding: 1.5rem;
+  flex: 1;
+  background: #1d1d1d;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
 }
 
 .project-title {
@@ -433,3 +545,4 @@ footer {
 footer p {
   text-align: center;
 }
+

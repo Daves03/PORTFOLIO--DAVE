@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "html-css-js-portfolio-tutorial-2",
+			"path": "../html-css-js-portfolio-tutorial-2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PORTFOLIO- DAVE"
+	}
+}

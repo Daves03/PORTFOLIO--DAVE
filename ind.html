@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Compiler</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.photo-compiler {
+    display: flex;
+    align-items: center;
+}
+
+#prev, #next {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#photo {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="photo-compiler">
+        <button id="prev" onclick="showPrevImage()">&#10094;</button>
+        <img id="photo" src="./Img/cake-system.jpg" alt="Photo">
+        <img id="photo" src="./Img/checklist.jpg" alt="Photo">
+        <img id="photo" src="./Img/rental-web.jpg" alt="Photo">
+        <button id="next" onclick="showNextImage()">&#10095;</button>
+    </div>
+
+    <script >
+
+let currentImageIndex = 0;
+const images = ["./Img/cake-system.jpg", "./Img/checklist.jpg", "./Img/rental-web.jpg"]; // Add your image paths here
+
+function showImage(index) {
+    const photo = document.getElementById("photo");
+    if (index >= 0 && index < images.length) {
+        photo.src = images[index];
+    }
+}
+
+function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+}
+
+function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    showImage(currentImageIndex);
+}
+
+// Initial display
+showImage(currentImageIndex);
+
+    </script>
+</body>
+</html>
