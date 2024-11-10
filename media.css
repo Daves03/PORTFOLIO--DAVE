@@ -65,6 +65,12 @@
   .about-containers {
     margin-top: 0;
   }
+  .animated-text {
+    font-size: 2em;
+    font-family: fantasy;
+    color: #678e1d;
+  }
+  
 
 }
 
@@ -73,6 +79,12 @@
   footer {
     height: 40vh;
   }
+  .animated-text {
+    font-size: 1.75em;
+    font-family: fantasy;
+    color: #678e1d;
+  }
+  
   #profile {
     height: 83vh;
     margin-bottom: 0;

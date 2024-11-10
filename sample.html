@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Skills Section</title>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.details-container2 {
+    text-align: center;
+}
+
+.title {
+    color: #a9ff00;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.progress-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Outer Circle */
+.progress-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#678e1d 0deg, #333 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 1s ease-out;
+}
+
+/* Inner Circle */
+.inner-circle {
+    width: 75px;
+    height: 75px;
+    background-color: #252525;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centered Percentage Text */
+.progress-percentage {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(173, 173, 173);
+}
+
+/* Label Below the Circle */
+.progress-label {
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #678e1d;
+    font-weight: bold;
+}
+
+</style></head>
+<body>
+    <div class="details-container2">
+        <h1 class="title">Skills</h1>
+        <div class="progress-container">
+            <div class="progress-item" data-percentage="35">
+                <div class="progress-circle">
+                    <div class="inner-circle">
+                        <span class="progress-percentage">0%</span>
+                    </div>
+                </div>
+                <div class="progress-label">UI & UX Design</div>
+            </div>
+            <div class="progress-item" data-percentage="20">
+                <div class="progress-circle">
+                    <div class="inner-circle">
+                        <span class="progress-percentage">0%</span>
+                    </div>
+                </div>
+                <div class="progress-label">Web Development</div>
+            </div>
+            <div class="progress-item" data-percentage="30">
+                <div class="progress-circle">
+                    <div class="inner-circle">
+                        <span class="progress-percentage">0%</span>
+                    </div>
+                </div>
+                <div class="progress-label">Web Design</div>
+            </div>
+            <div class="progress-item" data-percentage="10">
+                <div class="progress-circle">
+                    <div class="inner-circle">
+                        <span class="progress-percentage">0%</span>
+                    </div>
+                </div>
+                <div class="progress-label">Java Development</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const progressItems = document.querySelectorAll(".progress-item");
+
+    progressItems.forEach(item => {
+        const percentage = parseInt(item.getAttribute("data-percentage"));
+        const progressCircle = item.querySelector(".progress-circle");
+        const percentageText = item.querySelector(".progress-percentage");
+        
+        let currentPercentage = 0;
+        const incrementSpeed = 20; // Adjust this value to control speed
+
+        const interval = setInterval(() => {
+            if (currentPercentage < percentage) {
+                currentPercentage++;
+                percentageText.textContent = `${currentPercentage}%`;
+                progressCircle.style.background = `conic-gradient(#678e1d ${currentPercentage * 3.6}deg, #333 ${currentPercentage * 3.6}deg)`;
+            } else {
+                clearInterval(interval);
+            }
+        }, incrementSpeed);
+    });
+});
+
+    </script>
+</body>
+</html>
