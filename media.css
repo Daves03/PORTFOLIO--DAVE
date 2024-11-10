@@ -72,7 +72,7 @@
     color: #678e1d;
   }
    .portfolio-section {
-        padding: 1rem;
+        padding: 0rem;
         gap: 1.5rem;
     }
 
@@ -93,6 +93,15 @@
         font-size: 0.6rem;
     }
 
+}
+
+@media (min-width: 601px) {
+  .extra-details {
+      display: block; /* Show details by default */
+  }
+  .arrow-toggle {
+      display: none; /* Hide arrow on larger screens */
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -165,47 +174,50 @@
   #about{
     padding: 1rem;
   }
-  .portfolio-item{
-    display: grid;
-  }
- 
-  
-}
-/* Styles for screens larger than 600px */
-@media (min-width: 601px) {
-  .extra-details {
-      display: block; /* Show details by default */
-  }
-  .arrow-toggle {
-      display: none; /* Hide arrow on larger screens */
-  }
+
+ /* Portfolio Section */
+ .portfolio-item {
+  display: grid;
+  padding: 1rem;
+  transform: scale(1);
 }
 
-/* Styles for screens wider than 600px */
-@media (min-width: 601px) {
-  .extra-details {
-      display: block; /* Show details by default on larger screens */
-  }
-  .arrow-toggle {
-      display: none; /* Hide arrow on larger screens */
-  }
+.portfolio-image img {
+  width: 100%; /* Adjust image width for smaller screens */
 }
 
-/* Styles for screens 600px or narrower */
-@media (max-width: 600px) {
-  .extra-details {
-      display: none; /* Hide details by default on smaller screens */
-  }
-  .arrow-toggle {
-      display: block; /* Show arrow toggle on smaller screens */
-  }
+.portfolio-info h2 {
+  font-size: 1rem; /* Adjust title font size */
+}
+.portfolio-item::before{
+  background: none;
+}
+.portfolio-info p,
+.portfolio-details {
+  font-size: 0.8rem; /* Adjust text font size */
+}
 
-  /* Toggle style for expanded view */
-  .portfolio-item.expand .extra-details {
-      display: block;
-  }
+/* Hide extra details by default, show arrow toggle */
+.extra-details {
+  display: none;
+}
+.arrow-toggle {
+  display: block;
+  cursor: pointer;
+  color: #7dae21;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  transition: transform 0.3s ease;
+}
 
-  .portfolio-item.expand .arrow-toggle {
-      transform: rotate(180deg); /* Flip arrow on expand */
-  }
+/* Toggle visibility of extra details on click */
+.portfolio-item.expand .extra-details {
+  display: block;
+}
+
+/* Rotate arrow when expanded */
+.portfolio-item.expand .arrow-toggle {
+  transform: rotate(180deg);
+}
 }
