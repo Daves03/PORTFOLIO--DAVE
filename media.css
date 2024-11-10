@@ -203,10 +203,11 @@
   display: none;
 }
 .arrow-toggle {
-  display: block;
+  display: inline-block; /* Ensure it has a block level click area */
+  padding: 0.5rem;   
   cursor: pointer;
   color: #7dae21;
-  text-align: center;
+  align-self: flex-end;
   font-size: 1.5rem;
   margin-top: 0.5rem;
   transition: transform 0.3s ease;
