@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Layout</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.portfolio-item {
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Outer shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left-pointing center shadow */
+.portfolio-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-1px); /* Offset slightly to the left */
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+}
+
+.portfolio-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.portfolio-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.portfolio-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-details {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+.launch-button {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.launch-button:hover {
+    background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="portfolio-section">
+    <div class="portfolio-item">
+        <div class="portfolio-image">
+            <img src="path/to/image1.jpg" alt="Project Image 1">
+        </div>
+        <div class="portfolio-info">
+            <h2>Illustration</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet elit sit amet bibendum tristique.</p>
+            <p class="portfolio-details"><strong>Category:</strong> Art</p>
+            <p class="portfolio-details"><strong>Client:</strong> Sample Client</p>
+            <p class="portfolio-details"><strong>Release Date:</strong> January 1, 2023</p>
+            <button class="launch-button">Launch Project</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -70,14 +70,38 @@
     font-family: fantasy;
     color: #678e1d;
   }
-  
+  .portfolio-section {
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.portfolio-image img {
+    width: 100%;
+}
+
+.portfolio-info h2 {
+    font-size: 1.3rem;
+}
+
+.portfolio-info p,
+.portfolio-details {
+    font-size: 0.9rem;
+}
 
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
+  #contact {
     height: 40vh;
+  }
+  footer {
+    height: 5vh;
+    justify-content: center;
   }
   .animated-text {
     font-size: 1.75em;

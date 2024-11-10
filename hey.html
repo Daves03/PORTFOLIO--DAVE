@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Popup on Right Side</title>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-section {
+    width: 60%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Popup styling */
+.popup-box {
+    position: absolute;
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 100;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+</style></head>
+<body>
+    <div class="container">
+        <!-- Left side for images or portfolio showcase -->
+        <div class="left-section">
+            <div class="image-container" onclick="openPopup(event, 'Vimeo FX Showreel I', 'Description for Vimeo FX Showreel I')">
+                <img src="./Img/cake-system.jpg" alt="Portfolio Image">
+            </div>
+            <div class="image-container" onclick="openPopup(event, 'Illustration', 'Description for Illustration')">
+                <img src="./Img/checklist.jpg" alt="Portfolio Image">
+            </div>
+            <!-- Add more image containers as needed -->
+        </div>
+    </div>
+
+    <!-- Right side popup that will appear beside each clicked image -->
+    <div class="popup-box" id="popupBox">
+        <button class="close-button" onclick="closePopup()">X</button>
+        <h2 id="projectTitle">Project Title</h2>
+        <p id="projectDescription">Project description will appear here.</p>
+        <div class="project-info">
+            <p><strong>Categories:</strong> <span id="projectCategory"></span></p>
+            <p><strong>Client:</strong> <span id="projectClient"></span></p>
+            <p><strong>Release Date:</strong> <span id="projectDate"></span></p>
+        </div>
+    </div>
+
+    <script >
+        function openPopup(event, title, description) {
+    const popupBox = document.getElementById("popupBox");
+
+    // Set the popup content
+    document.getElementById("projectTitle").innerText = title;
+    document.getElementById("projectDescription").innerText = description;
+
+    // Get the clicked image container's position
+    const imageContainer = event.currentTarget;
+    const rect = imageContainer.getBoundingClientRect();
+
+    // Position the popup to the right of the image
+    popupBox.style.top = `${rect.top + window.scrollY}px`;
+    popupBox.style.left = `${rect.right + 20}px`; // Add 20px gap to the right
+
+    // Show the popup
+    popupBox.style.display = "block";
+}
+
+function closePopup() {
+    const popupBox = document.getElementById("popupBox");
+    popupBox.style.display = "none";
+}
+
+    </script>
+</body>
+</html>
