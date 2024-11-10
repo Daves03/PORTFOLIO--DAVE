@@ -138,4 +138,7 @@
   .section-container{
     display: block;
   }
+  #about{
+    padding: 1rem;
+  }
 }
