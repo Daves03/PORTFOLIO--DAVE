@@ -32,6 +32,7 @@
   #projects {
     height: fit-content;
   }
+  
 }
 
 @media screen and (max-width: 1200px) {
@@ -70,28 +71,27 @@
     font-family: fantasy;
     color: #678e1d;
   }
-  .portfolio-section {
-    padding: 1rem;
-    gap: 1.5rem;
-}
+   .portfolio-section {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
 
-.portfolio-item {
-    flex-direction: column;
-    padding: 1rem;
-}
+    .portfolio-item {
+        padding: 1rem;
+    }
 
-.portfolio-image img {
-    width: 100%;
-}
+    .portfolio-image img {
+        width: 70%;
+    }
 
-.portfolio-info h2 {
-    font-size: 1.3rem;
-}
+    .portfolio-info h2 {
+        font-size: 1rem;
+    }
 
-.portfolio-info p,
-.portfolio-details {
-    font-size: 0.9rem;
-}
+    .portfolio-info p,
+    .portfolio-details {
+        font-size: 0.6rem;
+    }
 
 }
 
@@ -164,5 +164,48 @@
   }
   #about{
     padding: 1rem;
+  }
+  .portfolio-item{
+    display: grid;
+  }
+ 
+  
+}
+/* Styles for screens larger than 600px */
+@media (min-width: 601px) {
+  .extra-details {
+      display: block; /* Show details by default */
+  }
+  .arrow-toggle {
+      display: none; /* Hide arrow on larger screens */
+  }
+}
+
+/* Styles for screens wider than 600px */
+@media (min-width: 601px) {
+  .extra-details {
+      display: block; /* Show details by default on larger screens */
+  }
+  .arrow-toggle {
+      display: none; /* Hide arrow on larger screens */
+  }
+}
+
+/* Styles for screens 600px or narrower */
+@media (max-width: 600px) {
+  .extra-details {
+      display: none; /* Hide details by default on smaller screens */
+  }
+  .arrow-toggle {
+      display: block; /* Show arrow toggle on smaller screens */
+  }
+
+  /* Toggle style for expanded view */
+  .portfolio-item.expand .extra-details {
+      display: block;
+  }
+
+  .portfolio-item.expand .arrow-toggle {
+      transform: rotate(180deg); /* Flip arrow on expand */
   }
 }

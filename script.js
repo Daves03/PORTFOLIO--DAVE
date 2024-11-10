@@ -41,3 +41,9 @@ function typeText() {
 }
 
 typeText();
+
+function toggleDetails(element) {
+    const portfolioItem = element.closest('.portfolio-item');
+    portfolioItem.classList.toggle('expand');
+}
+
