@@ -91,5 +91,30 @@ function myFunction() {
         top: 0,
         behavior: "smooth" // Smooth scrolling
     });
-}
+}   
+async function clearForm(event) {
+  event.preventDefault(); // Prevent the default form submission
 
+  const form = event.target; // Get the form element
+  const formData = new FormData(form);
+
+  try {
+      const response = await fetch("https://formspree.io/f/xwpkbnvw", {
+          method: "POST",
+          body: formData,
+          headers: {
+              "Accept": "application/json"
+          }
+      });
+
+      if (response.ok) {
+          alert("Message sent successfully!");
+          form.reset(); // Clear the form only after successful submission
+      } else {
+          alert("There was a problem sending your message.");
+      }
+  } catch (error) {
+      console.error("Error:", error);
+      alert("Error: Could not send your message. Please try again later.");
+  }
+}
