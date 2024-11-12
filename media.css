@@ -125,11 +125,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  #hamburger-nav{
-    justify-content: flex-end;
-  }
+
   .hamburger-button{
-    margin-right: 1.5rem;
+    margin-left: 6rem;
   }
   .hamburger-button{
     width: 35px;
