@@ -1,9 +1,39 @@
-  function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".drop-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }
+// Toggle menu function for opening and closing the fullscreen menu
+function toggleMenu() {
+  const menu = document.getElementById('fullscreenMenu');
+  menu.classList.toggle('open');
+}
+
+// Close the menu when a link is clicked
+const menuLinks = document.querySelectorAll('.fullscreen-menu ul li a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const menu = document.getElementById('fullscreenMenu');
+    menu.classList.remove('open'); // Close the menu
+  });
+});
+
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Calculate the offset scroll position
+            const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 68; // adjust 60px for sticky header height
+
+            // Smooth scroll with offset
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
   document.addEventListener("DOMContentLoaded", () => {
     const progressItems = document.querySelectorAll(".progress-item");
@@ -47,3 +77,11 @@ function toggleDetails(element) {
     portfolioItem.classList.toggle('expand');
 }
 
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }

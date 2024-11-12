@@ -21,31 +21,26 @@
         </ul>
     </nav>
     
-    <nav id="drop-nav">
-        <div class="name">
-            <img src="./Img/download.png" alt="My Logo" class="icon" />
+    <nav id="hamburger-nav">
+        <div class="hamburger-button" onclick="toggleMenu()">
+          <div class="hamburger-lines"></div>
         </div>
-        <div class="drop-menu">
-            <div class="drop-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <ul>
-                    <li><a href="#profile" onclick="toggleMenu()">Profile</a></li>
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      </nav>
+      
+      <div class="fullscreen-menu" id="fullscreenMenu">
+        <ul>
+          <li><a href="#profile">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
 
     <section id="profile">
         <div class="section__text">
             <div class="animated-text" id="animatedText"></div>
-            <p class="section__text__p1">I'm</p>
+            <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Dave Trampe</h1>
             <p class="section__text__p2">[Computer Science]</p>
             <div class="btn-container">
@@ -53,8 +48,8 @@
                 <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
             </div>
             <div id="socials-container">
-                <img src="./Img/facebook.png" alt="My Facebook profile" class="icon" onclick="location.href='https://linkedin.com/'" />
-                <img src="./Img/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/'" />
+                <img src="./Img/facebook.png" alt="My Facebook profile" class="icon" onclick="location.href='https://www.facebook.com/dave.trampe.1'" />
+                <img src="./Img/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Daves03'" />
             </div>
         </div>
         <div class="section__pic-container">
@@ -134,18 +129,23 @@
                     <div class="adjust">
                         <div class="icon-container">
                             <img src="./Img/html.png" alt="html icon" class="icon1" />
+                            <a href="">HTML</a>
                         </div>
                         <div class="icon-container">
                             <img src="./Img/php.png" alt="php icon" class="icon1" />
+                            <a href="">PHP</a>
                         </div>
                         <div class="icon-container">
                             <img src="./Img/java-script.png" alt="java-script icon" class="icon1" />
+                            <a href="">JAVA<br>SCRIPT</a>
                         </div>
                         <div class="icon-container">
                             <img src="./Img/python.png" alt="python icon" class="icon1" />
+                            <a href="">PYTHON</a>
                         </div>
                         <div class="icon-container">
                             <img src="./Img/sql-server.png" alt="sql-server icon" class="icon1" />
+                            <a href="">SQL</a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,6 @@
     </section>
 
     <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>   
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
             <div class="about-containers">
