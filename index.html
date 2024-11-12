@@ -6,12 +6,14 @@
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="media.css">
+    <meta name="author" content="Dave V. Trampe">
+    <meta name="keywords" content="Computer Science Student, Web Development, PHP, JavaScript, Java, MySQL, Portfolio, Cavite State University, Student Projects, Coding Portfolio">
+    <meta name="description" content="Explore the portfolio of Dave V. Trampe, a Computer Science student showcasing skills in web development, programming, and innovative projects in PHP, JavaScript, and Java.">
 </head>
 <body>
     <nav id="desktop-nav">
         <div class="logo">
-            <img src="./Img/download.png" alt="My Logo" class="my-logo">
-
+           <a href="#profiles"><img src="./Img/download.png" alt="My Logo" class="my-logo" ></a> 
         </div>
         <ul class="nav-links">
             <li><a href="#profile">Profile</a></li>
@@ -23,7 +25,7 @@
     
     <nav id="hamburger-nav">
         <div class="logo">
-            <img src="./Img/download.png" alt="My Logo" class="my-logo">
+            <img src="./Img/download.png" alt="My Logo" class="my-logo" href="#profile">
         </div>
         <div class="hamburger-button" onclick="toggleMenu()">
           <div class="hamburger-lines"></div>
@@ -77,17 +79,24 @@
                     <div class="details-container">
                         <img src="./Img/hobbies.png" alt="Experience icon" class="icon1" />
                         <h3>Hobbies</h3>
-                        <p>2+ years<br />Frontend Development</p>
+                        <p><br>Anime<br>
+                           Coding Challenge<br>
+                           Puzzle  </p>
                     </div>
                     <div class="details-container">
                         <img src="./Img/education.png" alt="Education icon" class="icon1" />
                         <h3>Education</h3>
-                        <p>B.Sc. Bachelor’s Degree<br />M.Sc. Master’s Degree</p>
+                        <p><br> BS COMPUTER SCIENCE(Current)
+                            <br>Grade 12 - ICT
+                            <br>Grade 11- ICT</p>
                     </div>
                     <div class="details-container">
                         <img src="./Img/skills.png" alt="Skills icon" class="icon1" />
                         <h3>Skills</h3>
-                        <p>Developer<br />Web Development</p>
+                        <p><br>Responsive Design<br>
+                           Web Development<br>
+                           Database Management</p>
+
                     </div>
                 </div>
             </div>
@@ -132,23 +141,23 @@
                     <div class="adjust">
                         <div class="icon-container">
                             <img src="./Img/html.png" alt="html icon" class="icon1" />
-                            <a href="">HTML</a>
+                            <p>HTML</p>
                         </div>
                         <div class="icon-container">
                             <img src="./Img/php.png" alt="php icon" class="icon1" />
-                            <a href="">PHP</a>
+                            <p>PHP</p>
                         </div>
                         <div class="icon-container">
                             <img src="./Img/java-script.png" alt="java-script icon" class="icon1" />
-                            <a href="">JAVA<br>SCRIPT</a>
+                            <p>JAVA<br>SCRIPT</p>
                         </div>
                         <div class="icon-container">
                             <img src="./Img/python.png" alt="python icon" class="icon1" />
-                            <a href="">PYTHON</a>
+                            <p>PYTHON</p>
                         </div>
                         <div class="icon-container">
                             <img src="./Img/sql-server.png" alt="sql-server icon" class="icon1" />
-                            <a href="">SQL</a>
+                            <p>SQL</p>
                         </div>
                     </div>
                 </div>
@@ -174,6 +183,8 @@
                             <div class="extra-details">
                                 <p>Piece of Cake is an online cake ordering system developed as part of our midterm project for our professor, Sir Roy. The system provides a convenient way for users to browse and order cakes online. Users can either select from a variety of pre-designed cakes or place a custom order to meet their specific preferences.</p>
                                 <p class="portfolio-details"><strong>Category:</strong> E-commerce</p>
+                                <button class="launch-button">View Photo</button>
+
                             </div>
                         </div>
                     </div>
@@ -189,6 +200,8 @@
                             <div class="extra-details">
                                 <p>The Student Checklist is an academic tool developed for our midterm exam project under the guidance of Sir Dhan. This system is designed to help students efficiently monitor their academic progress. With a user-friendly interface, it provides an organized view of essential information, making it easy for students to stay on top of their studies.</p>
                                 <p class="portfolio-details"><strong>Category:</strong> Student Cheklist</p>
+                                <button class="launch-button">View Photo</button>
+
                             </div>
                         </div>
                     </div>
@@ -198,30 +211,34 @@
                             <img src="./Img/rental-web.jpg" alt="Project Image 1">
                         </div>
                         <div class="portfolio-info">
-                            <h2>Illustration</h2>
+                            <h2>Jecati Heavy Equiptment Rental</h2>
                             <div class="arrow-toggle" onclick="toggleDetails(this)">&#9660;</div>
 
                             <div class="extra-details">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet elit sit amet bibendum tristique.</p>
-                            <p class="portfolio-details"><strong>Category:</strong> Art</p>
+                            <p>Jecati Heavy Equipment Rental, an online platform designed to streamline the process of renting heavy equipment and hiring labor for construction projects. The system allows clients to view detailed equipment and service options, access transparent pricing, and easily submit inquiries.</p>
+                            <p class="portfolio-details"><strong>Category:</strong> E-commerce</p>
+                            <button class="launch-button">View Photo</button>
+
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio-item">
+                     <div class="portfolio-item">
                         <div class="portfolio-image">
-                            <img src="path/to/image1.jpg" alt="Project Image 1">
+                            <img src="./Img/dentist.jpg" alt="Project Image 1">
                         </div>
                         <div class="portfolio-info">
-                            <h2>Illustration</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet elit sit amet bibendum tristique.</p>
-                            <p class="portfolio-details"><strong>Category:</strong> Art</p>
-                            <p class="portfolio-details"><strong>Client:</strong> Sample Client</p>
-                            <p class="portfolio-details"><strong>Release Date:</strong> January 1, 2023</p>
-                            <button class="launch-button">Launch Project</button>
+                            <h2>Bitelite Appointment System</h2>
+                            <div class="arrow-toggle" onclick="toggleDetails(this)">&#9660;</div>
+
+                            <div class="extra-details">
+                            <p>The Bitelite Appointment System is a streamlined online platform designed to simplify appointment scheduling and management for businesses and their clients. This system enables clients to view available slots, book appointments, and receive automated reminders, enhancing convenience and reducing no-shows.</p>
+                            <p class="portfolio-details"><strong>Category:</strong> Booking System</p>
+                            <button class="launch-button">View Photo</button>
+
+                            </div>
                         </div>
                     </div>
-
                     
                 </div>
             </div>
@@ -229,10 +246,37 @@
     </section>
 
     <section id="contact">
-        <div class="contact-info-upper-container">
-            <!-- Add your contact information here -->
+        <h1 class="title1">Contact</h1>
+        <div class="contact-form-container">
+          <div class="form-left">
+            <h2>Write us</h2>
+            <form action="#" method="post">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+              
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              
+              <button type="submit" class="send-btn">Send Message</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>We're open for any suggestion or just to have a chat.</p>
+            <p><strong>Address:</strong> 198 West 21th Street, Suite 721, New York NY 10016</p>
+            <p><strong>Phone:</strong> +1235 2355 98</p>
+            <p><strong>Email:</strong> info@yoursite.com</p>
+            <p><strong>Website:</strong> yoursite.com</p>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <footer>
         <p>&copy; 2024 Dave Trampe. All rights reserved.</p>
