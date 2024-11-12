@@ -1,5 +1,4 @@
 /* Responsive Styles for Dropdown Navigation */
-
 #hamburger-menu {
   display: none; /* Hide by default */
 }
@@ -9,107 +8,69 @@
 }
 
 @media (max-width: 1200px) {
-    #desktop-nav {
-      display: none; /* Hide the desktop nav on small screens */
-    }
-  
-    #drop-nav {
-      display: flex; /* Show the drop nav on small screens */
-    }
-    
-    .menu-links {
-      display: none; /* Initially hide the dropdown menu */
-    }
-    
-    .menu-links.open {
-      display: block; /* Show the dropdown when open */
-    }
-  }
-  
-  
- /* MEDIA QUERY */
-
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-  
-}
-
-@media screen and (max-width: 1200px) {
   #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container{
-    display: block;
+    display: none; /* Hide the desktop nav on small screens */
   }
 
-  section,
-  .section-container {
-    height: fit-content;
+  #drop-nav {
+    display: flex; /* Show the drop nav on small screens */
   }
-  section {
-    margin: 0 5%;
+
+  .menu-links {
+    display: none; /* Initially hide the dropdown menu */
   }
+
+  .menu-links.open {
+    display: block; /* Show the dropdown when open */
+  }
+
+  #hamburger-nav {
+    display: flex; /* Ensure hamburger menu is shown on mobile screens */
+  }
+
+  #projects {
+    padding: 3rem;
+  }
+
+  .portfolio-item {
+    padding: 1rem;
+    transform: scale(1);
+  }
+
+  .portfolio-image img {
+    width: 100%;
+  }
+
+  .portfolio-info h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
   .section__pic-container {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
   }
-  .about-containers {
-    margin-top: 0;
-  }
+
   .animated-text {
     font-size: 2em;
     font-family: fantasy;
     color: #678e1d;
   }
-   .portfolio-section {
-        padding: 0rem;
-        gap: 1.5rem;
-    }
-
-    .portfolio-item {
-        padding: 1rem;
-    }
-
-    .portfolio-image img {
-        width: 70%;
-    }
-
-    .portfolio-info h2 {
-        font-size: 1rem;
-    }
-
-
-
 }
+
 @media screen and (max-width: 900px) {
-  
   .portfolio-image img {
     width: 90%;
   }
 }
+
 @media screen and (max-width: 765px) {
   .portfolio-info p,
   .portfolio-details {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
+
   .portfolio-image img {
     width: 85%;
   }
@@ -117,10 +78,11 @@
 
 @media (min-width: 601px) {
   .extra-details {
-      display: block; /* Show details by default */
+    display: block; /* Show details by default */
   }
+
   .arrow-toggle {
-      display: none; /* Hide arrow on larger screens */
+    display: none; /* Hide arrow on larger screens */
   }
 }
 
@@ -128,152 +90,210 @@
   .progress-label {
     font-size: 14px;
   }
-  .icon1{
+
+  .icon1 {
     height: 2rem;
     width: auto;
   }
-  .icon-container p{
+
+  .icon-container p {
     margin-top: 2vh;
     font-size: 13px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 200;
   }
-  .hamburger-button{
+
+  .hamburger-button {
     margin-left: 6rem;
-  }
-  .hamburger-button{
     width: 35px;
     height: 35px;
   }
-  .hamburger-lines{
+
+  .hamburger-lines {
     width: 13px;
     height: 3px;
   }
-  .hamburger-lines::before,  .hamburger-lines::after{
+
+  .hamburger-lines::before, .hamburger-lines::after {
     width: 13px;
     height: 3px;
   }
+
   #contact {
-    height: 40vh;
+    height: fit-content;
+    display: block;
   }
+
   footer {
     height: 5vh;
     justify-content: center;
   }
-  #projects{
-    padding: 3rem;
-  }
+
   .animated-text {
     font-size: 1.75em;
     font-family: fantasy;
     color: #678e1d;
   }
-  
+
   #profile {
     height: fit-content;
     margin-bottom: 0;
   }
+
   article {
     font-size: 1rem;
   }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
+
   .about-containers,
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
   }
-  .contact-info-container {
-    margin: 0;
-  }
+
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;
   }
+
   .experience-sub-title {
     font-size: 1.25rem;
   }
+
   .my-logo {
     height: 2rem;
     width: 5rem;
   }
+
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
   }
+
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 250px;
+    height: auto;
     justify-content: center;
+    display: block;
   }
+  .section__pic-container img {
+    width: 200px;
+    height: 190px;
+
+  }
+
   .section__text__p2 {
     font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
+ 
+
+
   .title {
     font-size: 2rem;
   }
+
   .text-container, details p {
     text-align: justify;
   }
 
-  .section-container{
+  .section-container {
     display: block;
   }
-  #about{
+
+  #about {
     padding: 1rem;
   }
 
- /* Portfolio Section */
- .portfolio-item {
-  display: grid;
-  padding: 1rem;
-  transform: scale(1);
+  .portfolio-item {
+    display: grid;
+    padding: 1rem;
+  }
+
+  .portfolio-info p,
+  .portfolio-details {
+    font-size: 1rem;
+  }
+
+  .extra-details {
+    display: none;
+  }
+
+  .extra-details strong {
+    color: #678e1d;
+  }
+
+  .arrow-toggle {
+    display: inline-block;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #7dae21;
+    align-self: flex-start;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio-item.expand .extra-details {
+    display: block;
+  }
+
+  .portfolio-item.expand .arrow-toggle {
+    transform: rotate(180deg);
+  }
+
+  .contact-form-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .form-left {
+    padding: 2rem;
+  }
+
+  .title1 {
+    font-size: 2rem;
+    margin-bottom: 3vh;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  label, .contact-info p {
+    font-size: 0.85rem;
+  }
+
+  .send-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
-.portfolio-image img {
-  width: 100%; /* Adjust image width for smaller screens */
-}
+/* Styling for screens between 600px and 1200px */
+@media (min-width: 600px) and (max-width: 1200px) {
+  .portfolio-section {
+    display: grid;
+    grid-template-areas: 
+      "name"
+      "image"
+      "field";
+    grid-template-rows: auto auto auto;
+  }
 
-.portfolio-info h2 {
-  font-size: 1.2rem; /* Adjust title font size */
-}
-.portfolio-item::before{
-  background: none;
-}
-.portfolio-info p,
-.portfolio-details {
-  font-size: 1rem; /* Adjust text font size */
-}
+  .name {
+    grid-area: name;
+  }
 
-/* Hide extra details by default, show arrow toggle */
-.extra-details {
-  display: none;
+  .section__pic-container {
+    grid-area: image;
+  }
 
-}
-.extra-details strong{
-  color: #678e1d ;
-}
-.arrow-toggle {
-  display: inline-block; /* Ensure it has a block level click area */
-  padding: 0.5rem;   
-  cursor: pointer;
-  color: #7dae21;
-  align-self:flex-start;
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-  transition: transform 0.3s ease;
-}
+  .field {
+    grid-area: field;
+  }
 
-/* Toggle visibility of extra details on click */
-.portfolio-item.expand .extra-details {
-  display: block;
-}
-
-/* Rotate arrow when expanded */
-.portfolio-item.expand .arrow-toggle {
-  transform: rotate(180deg);
-}
+  .portfolio-info h2 {
+    font-size: 1.2rem;
+  }
 }

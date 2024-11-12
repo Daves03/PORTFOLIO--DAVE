@@ -12,8 +12,8 @@
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">
-           <a href="#profiles"><img src="./Img/download.png" alt="My Logo" class="my-logo" ></a> 
+        <div class="logo" onclick="scrollToTop()">
+            <img src="./Img/download.png" alt="My Logo" class="my-logo" >
         </div>
         <ul class="nav-links">
             <li><a href="#profile">Profile</a></li>
@@ -47,6 +47,9 @@
             <div class="animated-text" id="animatedText"></div>
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Dave Trampe</h1>
+                <div class="section__pic-container">
+            <img src="./Img/profile.jpg" alt="Dave Trampe profile picture" />
+        </div>
             <p class="section__text__p2">[Computer Science]</p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('./img/Trampe_Dave_Resume.pdf')">Download CV</button>
@@ -57,9 +60,7 @@
                 <img src="./Img/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Daves03'" />
             </div>
         </div>
-        <div class="section__pic-container">
-            <img src="./Img/profile.jpg" alt="Dave Trampe profile picture" />
-        </div>
+    
     </section>
 
     <section id="about">
@@ -183,7 +184,6 @@
                             <div class="extra-details">
                                 <p>Piece of Cake is an online cake ordering system developed as part of our midterm project for our professor, Sir Roy. The system provides a convenient way for users to browse and order cakes online. Users can either select from a variety of pre-designed cakes or place a custom order to meet their specific preferences.</p>
                                 <p class="portfolio-details"><strong>Category:</strong> E-commerce</p>
-                                <button class="launch-button">View Photo</button>
 
                             </div>
                         </div>
@@ -200,7 +200,6 @@
                             <div class="extra-details">
                                 <p>The Student Checklist is an academic tool developed for our midterm exam project under the guidance of Sir Dhan. This system is designed to help students efficiently monitor their academic progress. With a user-friendly interface, it provides an organized view of essential information, making it easy for students to stay on top of their studies.</p>
                                 <p class="portfolio-details"><strong>Category:</strong> Student Cheklist</p>
-                                <button class="launch-button">View Photo</button>
 
                             </div>
                         </div>
@@ -217,7 +216,6 @@
                             <div class="extra-details">
                             <p>Jecati Heavy Equipment Rental, an online platform designed to streamline the process of renting heavy equipment and hiring labor for construction projects. The system allows clients to view detailed equipment and service options, access transparent pricing, and easily submit inquiries.</p>
                             <p class="portfolio-details"><strong>Category:</strong> E-commerce</p>
-                            <button class="launch-button">View Photo</button>
 
                             </div>
                         </div>
@@ -234,7 +232,6 @@
                             <div class="extra-details">
                             <p>The Bitelite Appointment System is a streamlined online platform designed to simplify appointment scheduling and management for businesses and their clients. This system enables clients to view available slots, book appointments, and receive automated reminders, enhancing convenience and reducing no-shows.</p>
                             <p class="portfolio-details"><strong>Category:</strong> Booking System</p>
-                            <button class="launch-button">View Photo</button>
 
                             </div>
                         </div>
@@ -250,7 +247,7 @@
         <div class="contact-form-container">
           <div class="form-left">
             <h2>Write us</h2>
-            <form action="#" method="post">
+            <form action="mailto:davetrampe22@gmail.com" method="post">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required>
               
@@ -268,10 +265,10 @@
           </div>
           <div class="contact-info">
             <h2>Contact Information</h2>
-            <p>We're open for any suggestion or just to have a chat.</p>
-            <p><strong>Address:</strong> 198 West 21th Street, Suite 721, New York NY 10016</p>
+            <p> </p>
             <p><strong>Phone:</strong> +1235 2355 98</p>
-            <p><strong>Email:</strong> info@yoursite.com</p>
+            <a href="mailto:davetrampe22@gmail.com  ?subject=Feedback for 
+            webdevelopersnotes.com"><strong>Email:</strong> davetrampe22@gmail.com</a>
             <p><strong>Website:</strong> yoursite.com</p>
           </div>
         </div>

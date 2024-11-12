@@ -85,3 +85,11 @@ function myFunction() {
       x.style.display = "block";
     }
   }
+
+  function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Smooth scrolling
+    });
+}
+
